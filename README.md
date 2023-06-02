@@ -51,3 +51,11 @@ plants in the database. Each plant will have a
 common English name, a latin species name, and an
 image of the plant. These will be displayed in a
 flex element for easy responsive scaling.
+
+=====================================================
+
+Running the project locally
+---------------------------
+
+* Be in the root folder of the repo.
+* Run: `docker-compose up -d`
