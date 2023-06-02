@@ -6,3 +6,16 @@ services:
       - 8000:8000
     volumes:
       - ./app:/app
+  postgres:
+    image: 'postgres:14'
+    environment:
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  pgadmin:
+    image: 'dpage/pgadmin4'
+    ports:
+      - 8081:80
+
+volumes:
+  postgres_data:
