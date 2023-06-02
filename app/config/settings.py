@@ -69,7 +69,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'local_plantdb',
-        'USER': 'postgres',
+        'USER': 'local_botanist',
+        'PASSWORD': 'local_password',
         'HOST': 'postgres',
         'PORT': '5432'
     }
