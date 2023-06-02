@@ -8,8 +8,8 @@ services:
       - ./app:/app
   postgres:
     image: 'postgres:14'
-    environment:
-      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+#    environment:
+      #- 'POSTGRES_HOST_AUTH_METHOD=trust'
     volumes:
       - postgres_data:/var/lib/postgresql/data/
   pgadmin:
