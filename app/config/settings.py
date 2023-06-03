@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 # to_remove   'django.contrib.sessions',
 # to_remove   'django.contrib.messages',
     'django.contrib.staticfiles',
+    'data.apps.DataConfig',
     'PlantsPage.apps.PlantsPageConfig',
 ]
 
@@ -69,10 +70,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'local_plantdb',
-        'USER': 'local_botanist',
-        'PASSWORD': 'local_password',
-        'HOST': 'postgres',
-        'PORT': '5432'
+        'USER': 'djangobot',
+        'PASSWORD': 'djangopassword',
+        'HOST': 'postgres'
     }
 }
 

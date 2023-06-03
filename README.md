@@ -56,6 +56,41 @@ flex element for easy responsive scaling.
 
 Running the project locally
 ---------------------------
+* Open `docker-compose.yml` in a text editor.
+* Edit the enivornment values:
+  - 'POSTGRES_USER=your_admin_name'
+  - 'POSTGRES_PASSWORD=secure_admin_password'
+  - 'PGADMIN_DEFAULT_EMAIL=your@email.com'
+  - 'PGADMIN_DEFAULT_PASSWORD=your_pgadmin_app_password'
+
+* Open `app/config/settings.py` in a text editor.
+* Edit the database connection password:
+  - 'PASSWORD': 'new_secure_password',
 
 * Be in the root folder of the repo.
 * Run: `docker-compose up -d`
+* Run: `docker-compose exec postgres bash`
+* (postgres box) Run: `psql -U your_admin_name`
+* (psql) Run: `CREATE DATABASE local_plantdb`
+* (psql) Run: `CREATE ROLE djangobot WITH LOGIN PASSWORD 'new_secure_password'`
+* Exit the postgres box:
+            exit
+            exit
+
+* Run django migrations on the "data" app:
+            docker-compose exec django python manage.py showmigrations data
+            docker-compose exec django python manage.py migrate data
+
+* View the database in PGAdmin by browsing to `localhost:5000`
+* Or, use PGAdmin from any other computer on the network by browsing to
+  `[computer's local ip]:5000`
+* Log in to the PGAdmin interface using the email/password combination
+  given to the postgres container as environment variables.
+* Click on "Add New Server"
+* Give the server a name.
+* Go to the "Connection" tab.
+            Host name/address: postgres
+            Port: 5432
+            Username: your_admin_name
+            Password: secure_admin_password
+* Click "Save".

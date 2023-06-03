@@ -11,14 +11,14 @@ services:
     ports:
       - 5432:5432
     environment:
-      - 'POSTGRES_USER=local_botanist'
-      - 'POSTGRES_PASSWORD=local_password'
+      - 'POSTGRES_USER=tasha'
+      - 'POSTGRES_PASSWORD=93ptoeuh2893ptoeuh28'
     volumes:
       - postgres_data:/var/lib/postgresql/data/
   pgadmin:
     image: 'dpage/pgadmin4'
     ports:
-      - 8081:80
+      - 5000:80
     environment:
       - 'PGADMIN_DEFAULT_EMAIL=tash@artoftash.com'
       - 'PGADMIN_DEFAULT_PASSWORD=local_password'
