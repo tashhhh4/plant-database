@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from data.models import Plant
 
 def PlantsPage(request):
-    return render(request, 'plants_page.html')
+
+    plants = Plant.objects.all()
+
+    context = { 'plants': plants }
+
+    return render(request, 'plants_page.html', context)
