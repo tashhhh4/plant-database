@@ -1,2 +1,7 @@
 __pycache__/
-.env
+
+# env files with text AFTER the dot (env.*)
+#      are included as configuration samples.
+# env files with text BEFORE the dot (*.env)
+#      are used for real and left out of repo.
+*.env
