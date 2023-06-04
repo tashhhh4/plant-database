@@ -9,17 +9,18 @@ ul, li {
 
 /* PLANTS PAGE */
 body {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #edf7f7;
     background-color: #0b1a1a;
 }
 .plants {
     width: 1200px;
     margin: 0 auto;
+    text-align: center;
+
 }
 .plants h1 {
     font-size: 50px;
-    text-align: center;
     line-height: 80px;
 }
 .plants--list {
@@ -30,18 +31,20 @@ body {
     justify-content: space-evenly;
 }
 .plants--common-name {
-    text-align: center;
     font-size: 32px;
     line-height: 26px;
 }
 .plants--latin-name {
-    text-align: center;
     font-weight: 400;
     font-style: italic;
     line-height: 36px;
 }
 .plants--img {
     max-width: 300px;
+}
+footer {
+    padding: 6px;
+    font-size: 14px;
 }
 
 /* RESPONSIVE FLEX */
