@@ -1,0 +1,11 @@
+# Pip packages to be installed when building
+# the local development environment
+
+# Put this file here:
+# /docker/build/django/requirements.txt
+
+# (do not copy the comments)
+#-------------------------------------------
+
+Django==4.2.1
+psycopg2-binary==2.9.5
