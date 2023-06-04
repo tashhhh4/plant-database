@@ -7,7 +7,7 @@ from pathlib import Path
 WSGI_APPLICATION = 'config.wsgi.application'
 
 # Secret
-SECRET_KEY = '3f5e86a9be63c07376d0483b300b0f82634e76a475e9328e0a5859ea9163fa0b'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # Pathing
 ALLOWED_HOSTS = ['*']
