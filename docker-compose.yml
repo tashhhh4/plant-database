@@ -5,7 +5,7 @@ services:
     ports:
       - 8000:8000
     env_file:
-      - './docker/build/django/.env'
+      - './docker/build/django/django.env'
     volumes:
       - ./app:/app
   postgres:
