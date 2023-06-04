@@ -6,6 +6,9 @@ from pathlib import Path
 # Web Server Gateway Interface
 WSGI_APPLICATION = 'config.wsgi.application'
 
+# Secret
+SECRET_KEY = '3f5e86a9be63c07376d0483b300b0f82634e76a475e9328e0a5859ea9163fa0b'
+
 # Pathing
 ALLOWED_HOSTS = ['*']
 BASE_DIR = Path(__file__).resolve().parent.parent
