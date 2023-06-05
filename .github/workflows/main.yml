@@ -26,12 +26,12 @@ jobs:
       - name: Install dependencies
         run: pip install -r settings/requirements.production.txt
 
-      - name: Turn the repository into an artifact
+      - name: Upload app as artifact
         uses: actions/upload-artifact@v2
         with:
           name: plantdb-repo
           path: |
-            .
+            app/
 
   deploy:
     runs-on: ubuntu-latest
@@ -53,4 +53,4 @@ jobs:
         with:
           app-name: 'plant-database'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_842e4d1b4acc45bf8f662eb94aa348a3 }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
