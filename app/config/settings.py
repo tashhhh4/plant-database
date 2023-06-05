@@ -21,6 +21,7 @@ DEBUG = True
 INSTALLED_APPS = [
     'data.apps.DataConfig',
     'PlantsPage.apps.PlantsPageConfig',
+    'BrokenPage.apps.BrokenPageConfig',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

@@ -22,6 +22,9 @@ urlpatterns = [
     # Homepage
     path('', include('PlantsPage.urls')),
 
+    # Page with a coding error
+    path('broken/', include('BrokenPage.urls'))
+
 ]
 
 # Static Files
