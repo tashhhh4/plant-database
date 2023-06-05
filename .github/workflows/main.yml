@@ -30,8 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: plantdb-repo
-          path: |
-            app/
+          path: app/
 
   deploy:
     runs-on: ubuntu-latest
