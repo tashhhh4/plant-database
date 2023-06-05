@@ -21,6 +21,9 @@ jobs:
       - name: Copy production requirements
         run: cp settings/requirements.production.txt app/requirements.txt
 
+      - name: Copy production settings
+        run: cp settings/settings.production.py app/config/settings.py
+
       - name: Create and start virtual environment
         run: |
           python -m venv venv
@@ -29,13 +32,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r app/requirements.txt
 
-      - name: Copy production settings
-        run: cp settings/settings.production.py app/config/settings.py
-
       - name: Upload app as artifact
         uses: actions/upload-artifact@v2
         with:
-          name: plantdb-repo
+          name: plantdb-app
           path: app/
 
   deploy:
@@ -49,7 +49,7 @@ jobs:
       - name: Download repo artifact
         uses: actions/download-artifact@v2
         with:
-          name: plantdb-repo
+          name: plantdb-app
           path: .
 
       - name: Deploy to Azure Web App
