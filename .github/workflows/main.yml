@@ -18,13 +18,16 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Copy production requirements
+        run: cp settings/requirements.production.txt app/requirements.txt
+
       - name: Create and start virtual environment
         run: |
           python -m venv venv
           source venv/bin/activate
 
       - name: Install dependencies
-        run: pip install -r settings/requirements.production.txt
+        run: pip install -r app/requirements.txt
 
       - name: Upload app as artifact
         uses: actions/upload-artifact@v2
