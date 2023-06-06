@@ -1,2 +1,1 @@
-import sys
-sys.path.append('/my/directory')
+print('Hello World.')
