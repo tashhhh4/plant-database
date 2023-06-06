@@ -11,10 +11,10 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Pathing
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = '/'
 ROOT_URLCONF = 'config.urls'
 
-# Errors
+# Debug
 DEBUG = False
 
 # Apps
@@ -44,7 +44,8 @@ TEMPLATES = [
 ]
 
 # Static files (CSS, JS, Images)
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'collectedstatic')
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
