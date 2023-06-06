@@ -8,7 +8,7 @@ echo 'cd $APP_PATH' >> ~/.bashrc
 # Enter the source directory to make sure the script runs where the user expects
 cd $APP_PATH
 
-export APP_PATH="/app
+export APP_PATH="/app"
 if [ -z "$HOST" ]; then
                 export HOST=0.0.0.0
 fi
