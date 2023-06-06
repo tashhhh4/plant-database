@@ -11,7 +11,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Pathing
 ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
-BASE_DIR = '/'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_URLCONF = 'config.urls'
 
 # Debug
