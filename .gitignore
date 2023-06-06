@@ -1,4 +1,5 @@
 __pycache__/
+copy/
 
 # env files with text AFTER the dot (env.*)
 #      are included as configuration samples.
