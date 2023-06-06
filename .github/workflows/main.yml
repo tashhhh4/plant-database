@@ -21,11 +21,6 @@ jobs:
       - name: Copy production requirements
         run: cp settings/requirements.production.txt app/requirements.txt
 
-      - name: Create and start virtual environment
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-
       - name: Install dependencies
         run: pip install -r app/requirements.txt
 
