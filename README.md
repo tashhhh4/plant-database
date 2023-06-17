@@ -14,9 +14,7 @@ We may also try Azure file storage as an alternative.
 
 -----------------------------------------------------
 
-Since I am planning on making a website at NatashaLibera.com
-soon anyways, I will create subdomains off of it and deploy my
-staging and production environments to them.
+It is not necessary to buy a new domain to simply test the project since it gets a domain at azurewebsites.com .
 
 -----------------------------------------------------
 
@@ -58,15 +56,8 @@ Running the project locally
 ---------------------------
 * Open `docker-compose.yml` in a text editor.
 * Edit the enivornment values:
-  - 'POSTGRES_USER=your_admin_name'
-  - 'POSTGRES_PASSWORD=secure_admin_password'
-  - 'PGADMIN_DEFAULT_EMAIL=your@email.com'
-  - 'PGADMIN_DEFAULT_PASSWORD=your_pgadmin_app_password'
-
+  - see `settings/env.sample.txt`
 * Open `app/config/settings.py` in a text editor.
-* Edit the database connection password:
-  - 'PASSWORD': 'new_secure_password',
-
 * Be in the root folder of the repo.
 * Run: `docker-compose up -d`
 * Run: `docker-compose exec postgres bash`

@@ -3,6 +3,7 @@
 import os
 from pathlib import Path
 
+
 # Web Server Gateway Interface
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -11,11 +12,13 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 # Pathing
 ALLOWED_HOSTS = ['*']
-BASE_DIR = '/app'
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+print("BASE_DIR is:", BASE_DIR)
 ROOT_URLCONF = 'config.urls'
 
 # Debug
 DEBUG = True
+
 
 # Apps
 INSTALLED_APPS = [
@@ -45,10 +48,15 @@ TEMPLATES = [
 
 # Static files (CSS, JS, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'collectedstatic')
+
+#STATIC_ROOT = os.path.join(BASE_DIR, 'collectedstatic')
+
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'collectedstatic'),]
+STATICFILES_DIRS = ['/app/collectedstatic/']
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 # Database
 DATABASES = {
@@ -60,6 +68,7 @@ DATABASES = {
         'HOST': os.environ['DBHOST']
     }
 }
+
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
